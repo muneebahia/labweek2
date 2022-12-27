@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+main() {
+int roll-number = 187;
+float aggregrade = 81.45;
+char section = 'S';
+string name ='muneeba'
+cout<<"my name is:"<<endl;
+cout<<"my agregrade is"<<endl;
+cout<<"my section is"<<endl;
+cout<<"my roll-number"<<endl;
+
+
+
+
+
+
+
+
+
+
+
+}
