@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+void sleepwell(int holidays);
+
+main()
+{
+ int holidays;
+ cout<<"enter holidays";
+ cin>>holidays;
+
+ sleepwell (holidays);
+}
+  void sleepwell(int holidays)
+  {
+   int totaldaysiy,workingd,holidays,gamingtime;
+     
+    workingd=totaldaysiy+holidays;
+    gamingtime=(workingdays*63)+(holidays*127);
+    differencefn=30000-gamingtime;
+
+    if(differencefn<3)
