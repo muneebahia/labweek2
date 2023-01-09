@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+float percentage(int volume,int p1,int p2,int hours)
+
+main()
+{
+ int volume,p1,p2,hours;
+ cout<<"enter volume:";
+ cin>>volume;
+
+ cout<<"enter p1:";
+ cin>>p1;
+
+ cout<<"enter p2:";
+ cin>>p2;
+
+ cout<<"enter hours:";
+ cin>>hours;
+
+float percentage(int volume,int p1,int p2,int hours)
+{
+
+ float  p1after3hours, p2after3hours
+ p1after3hours=p1*3;
+
+ p2after3hours=p2*3;
+ result1=p1after3hours+ p2after3hours;
+ p1percentage=p1after3hours/result1;
+ cout<<"contribution of p1 is:"<<volumeper<<endl;
+
+ p2percentage=p2after3hours/result1;
+ cout<<"contribution of p1 is:"<<volumeper<<endl;
+ volumeper=result1/volume;
+ 
+cout<<"volume of pooi is:"<<volumeper<<endl;
