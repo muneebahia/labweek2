@@ -1,12 +1,16 @@
 #include <iostream>
 #include <windows.h>
-#include<conio.h>
+#include <conio.h>
 using namespace std;
 void printMaze();
 void printTank();
 void printinkio();
 void printredio();
 void printtwinklo();
+
+void printJake();
+void moveJake(int x,int y);
+void eraseJake();
 
 void moveTankDown();
 void moveTankLeft();
@@ -64,6 +68,10 @@ void bulletCollionWithredio();
 void bulletCollionWithtwinklo();
 void bulletCollionWithtTank();
 
+void playerCollisioWwithInkio();
+void playerCollisioWwithRedio();
+void playerCollisioWwithTwinklo();
+
 void wholeGame();
 void options();
 string choice;
@@ -71,7 +79,6 @@ void keys();
 void instructions();
 void game_name();
 void game_logo();
-
 
 void eraseTank();
 
@@ -86,6 +93,9 @@ int inkio_health = 50;
 int redio_health = 70;
 int twinklo_health = 80;
 int player_health = 90;
+
+char body = 254;
+char arm = 45;
 
 string inkioDirection = "Left";
 string redioDirection = "Left";
@@ -107,6 +117,10 @@ char enemy2[3][3] = {{box, box, box},
 char enemy3[3][3] = {{box, box, box},
                      {' ', ':', ' '},
                      {' ', ':', ' '}};
+
+char Jake[3][3] = {{' ', '|', ' '},
+                     {arm, body, arm},
+                     {' ', '|', ' '}};
 
 string maze1[26][121] = {
     {"#########################################################################################################################"},
@@ -141,13 +155,16 @@ int tankX = 5;
 int tankY = 20;
 // coordinates of inkio
 int enemyX = 4;
-int enemyY = 4;
+int enemyY = 2;
 // coordinates of redio
 int enemyA = 50;
-int enemyB = 4;
+int enemyB = 2;
 // coordinates of TWINKLO
 int enemyC = 90;
-int enemyD = 4;
+int enemyD = 2;
+// coordinates of Jake
+int JakeX = 10;
+int JakeY = 10;
 
 // global arrays and variables //
 // player bullets
@@ -174,8 +191,7 @@ int twinklobulletCount = 0;
 main()
 {
     system("cls");
-     wholeGame();
-    
+    wholeGame();
 }
 void printMaze()
 {
@@ -190,75 +206,75 @@ void printMaze()
 }
 void game_logo()
 {
-   cout << "                                                                               ----.  -==" << endl;
-   cout << "                                                                            .:=*       .*" << endl;
-   cout << "                                                                       :----:  += :----. " << endl;
-   cout << "                                 ::::::::::::::::::             .:----:..:::::: .:.      " << endl;
-   cout << "                               -=                  =.      .----:  .----:                " << endl;
-   cout << "                              :=                    *:--:::..::::::.                     " << endl;
-   cout << "                              *                     .+ .----:                            " << endl;
-   cout << "                --:::::::::+  #                      #-.                                 " << endl;
-   cout << "                *          +. *                      *                                   " << endl;
-   cout << "              .:#          +-:+::::::::::::::::::::::+:::-:                              " << endl;
-   cout << "             +: *          +.                              =-                            " << endl;
-   cout << "            =   .:::::::::::                                .+.                          " << endl;
-   cout << "           *                                                  *.                         " << endl;
-   cout << "        .:==:::::::::::::::::::::::::::------::::::::::----:::-+:::                      " << endl;
-   cout << "      -=:                                                          -=                    " << endl;
-   cout << "    :=  :--=+=------+*++**--------=**+---------=+++---:::--=++---=.  +.                  " << endl;
-   cout << "   =:.=-.=-. .-=  -=.    .=-   ---.  .:-=.  ---.  .:-=   =-. .:-: :+  =:                 " << endl;
-   cout << "  :  =: :-     -=:=        =- *          +.+:         * +.      =  *                     " << endl;
-   cout << "      ==.+     +.::        :=.=          .-#          -::+     .=-=                      " << endl;
-   cout << "        -=*=---   +:      :+  +:        .* :+        -+   ----+*=                        " << endl;
-   cout << "           ::-::-::++==---:    :--::::---    --::::-=:::::-::-:                          " << endl;
-   cout << "                      .:----------------------------::.                                  " << endl;
-   cout<<"Press any key to continue"<<endl;
-   getch();
+    cout << "                                                                               ----.  -==" << endl;
+    cout << "                                                                            .:=*       .*" << endl;
+    cout << "                                                                       :----:  += :----. " << endl;
+    cout << "                                 ::::::::::::::::::             .:----:..:::::: .:.      " << endl;
+    cout << "                               -=                  =.      .----:  .----:                " << endl;
+    cout << "                              :=                    *:--:::..::::::.                     " << endl;
+    cout << "                              *                     .+ .----:                            " << endl;
+    cout << "                --:::::::::+  #                      #-.                                 " << endl;
+    cout << "                *          +. *                      *                                   " << endl;
+    cout << "              .:#          +-:+::::::::::::::::::::::+:::-:                              " << endl;
+    cout << "             +: *          +.                              =-                            " << endl;
+    cout << "            =   .:::::::::::                                .+.                          " << endl;
+    cout << "           *                                                  *.                         " << endl;
+    cout << "        .:==:::::::::::::::::::::::::::------::::::::::----:::-+:::                      " << endl;
+    cout << "      -=:                                                          -=                    " << endl;
+    cout << "    :=  :--=+=------+++--------=*+---------=+++---:::--=++---=.  +.                  " << endl;
+    cout << "   =:.=-.=-. .-=  -=.    .=-   ---.  .:-=.  ---.  .:-=   =-. .:-: :+  =:                 " << endl;
+    cout << "  :  =: :-     -=:=        =- *          +.+:         * +.      =  *                     " << endl;
+    cout << "      ==.+     +.::        :=.=          .-#          -::+     .=-=                      " << endl;
+    cout << "        -==---   +:      :+  +:        . :+        -+   ----+*=                        " << endl;
+    cout << "           ::-::-::++==---:    :--::::---    --::::-=:::::-::-:                          " << endl;
+    cout << "                      .:----------------------------::.                                  " << endl;
+    cout << "Press any key to continue" << endl;
+    getch();
 }
 
 void game_name()
 {
-   cout << "######     ###    ##  ##   ### ###           ######   ######    #####    ##  ##  ######    ###     ######  " << endl;
-   cout << " ######   #####   ### ###   ## ###            ######  ### ###  ### ###  ### ###   ## ###   ###      ###### " << endl;
-   cout << "  ###    ### ###  ### ###   #####              ###    ###  ##  ### ###  ### ###   ## ###   ###      ##     " << endl;
-   cout << "  ###    ### ###  #### ##  #####               ###    ### ###  ##   ##  ##  ###   #####   ###      ######  " << endl;
-   cout << "  ###    ### ###  ## ####  ####                ###    ######   ##   ##  ###  ##  ### ##   ###      #####   " << endl;
-   cout << "  ###    #######  ### ###  ######              ###    ### ###  ### ###  ### ###  ### ###  ### ###  ###     " << endl;
-   cout << "  ###    ### ###  ### ###  ### ###             ###     ### ### #######  #######  #######  #######  ####### " << endl;
-   cout << " #####    ##  ##   ##  ##  ### ###            #####    ### ###  #####    #####   ######    #####    #####  " << endl;
+    cout << "######     ###    ##  ##   ### ###           ######   ######    #####    ##  ##  ######    ###     ######  " << endl;
+    cout << " ######   #####   ### ###   ## ###            ######  ### ###  ### ###  ### ###   ## ###   ###      ###### " << endl;
+    cout << "  ###    ### ###  ### ###   #####              ###    ###  ##  ### ###  ### ###   ## ###   ###      ##     " << endl;
+    cout << "  ###    ### ###  #### ##  #####               ###    ### ###  ##   ##  ##  ###   #####   ###      ######  " << endl;
+    cout << "  ###    ### ###  ## ####  ####                ###    ######   ##   ##  ###  ##  ### ##   ###      #####   " << endl;
+    cout << "  ###    #######  ### ###  ######              ###    ### ###  ### ###  ### ###  ### ###  ### ###  ###     " << endl;
+    cout << "  ###    ### ###  ### ###  ### ###             ###     ### ### #######  #######  #######  #######  ####### " << endl;
+    cout << " #####    ##  ##   ##  ##  ### ###            #####    ### ###  #####    #####   ######    #####    #####  " << endl;
 }
 void options()
 {
     string option;
-    while(option!="3")
+    while (option != "3")
     {
-        cout<<"1)keys"<<endl;
-        cout<<"2)instructions"<<endl;
-        cout<<"3)Exit"<<endl;
-        cout<<"Enter your option"<<endl;
-        cin>>option;
+        cout << "1)keys" << endl;
+        cout << "2)instructions" << endl;
+        cout << "3)Exit" << endl;
+        cout << "Enter your option" << endl;
+        cin >> option;
 
-        if(option=="1")
+        if (option == "1")
         {
             system("cls");
-           keys();
-            cout<<endl;
-            cout<<"Press any key to continue";
+            keys();
+            cout << endl;
+            cout << "Press any key to continue";
             getch();
             system("cls");
             options();
         }
-        else if(option=="2")
+        else if (option == "2")
         {
             system("cls");
-             instructions();
-            cout<<endl;
-            cout<<"Press any key to continue";
+            instructions();
+            cout << endl;
+            cout << "Press any key to continue";
             getch();
             system("cls");
             options();
         }
-        else if(option=="3")
+        else if (option == "3")
         {
             system("cls");
             wholeGame();
@@ -267,121 +283,163 @@ void options()
 }
 void wholeGame()
 {
-    cout<<"1)Start"<<endl;
-    cout<<"2)Options"<<endl;
-    cout<<"3)Exit"<<endl;
-    cout<<"Enter your choice"<<endl;
-    cin>>choice;
+    cout << "1)Start" << endl;
+    cout << "2)Options" << endl;
+    cout << "3)Exit" << endl;
+    cout << "Enter your choice" << endl;
+    cin >> choice;
 
-    if(choice=="1")
+    if (choice == "1")
     {
-     bool runGame=true;
-     system("cls");
-     game_name();
-     game_logo();
-    system("cls");
-    printMaze();
-    printTank();
-    printinkio();
-    printredio();
-    printtwinklo();
+        bool runGame = true;
+        system("cls");
+        game_name();
+        game_logo();
+        system("cls");
+        printMaze();
+        printTank();
+        printinkio();
+        printredio();
+        printtwinklo();
+        printJake();
+        while (runGame)
+        {
+            moveJake(tankX,tankY);
+            printTankHealth();
+            printRedioHealth();
+            printInkioHealth();
+            printTwinkloHealth();
+            printScore();
+            if (GetAsyncKeyState(VK_LEFT))
+            {
+                moveTankLeft();
+            }
+            if (GetAsyncKeyState(VK_RIGHT))
+            {
+                moveTankRight();
+            }
+            if (GetAsyncKeyState(VK_UP))
+            {
+                moveTankUp();
+            }
+            if (GetAsyncKeyState(VK_DOWN))
+            {
+                moveTankDown();
+            }
+            if (GetAsyncKeyState(VK_SPACE))
+            {
+                generateBullet();
+            }
 
-    while (runGame)
-    {
-        printScore();
-        if (GetAsyncKeyState(VK_LEFT))
-        {
-            moveTankLeft();
-        }
-        if (GetAsyncKeyState(VK_RIGHT))
-        {
-            moveTankRight();
-        }
-        if (GetAsyncKeyState(VK_UP))
-        {
-            moveTankUp();
-        }
-        if (GetAsyncKeyState(VK_DOWN))
-        {
-            moveTankDown();
-        }
-        if (GetAsyncKeyState(VK_SPACE))
-        {
-            generateBullet();
-        }
-        if (timer == 3)
-        {
-            moveinkio();
-            moveinkioBullet();
-            timer = 0;
-        }
-        if (timer1 == 5)
-        {
-            moveredio();
+            moveBullet();
+            playerCollisioWwithInkio();
+            playerCollisioWwithRedio();
+            playerCollisioWwithTwinklo();
+            bulletCollionWithinkio();
+            bulletCollionWithredio();
+            bulletCollionWithtwinklo();
+            bulletCollionWithtTank();
+            if (inkio_health != 0)
+            {
+                printinkio();
+                moveinkio();
+                if (timer == 3)
+                {
+                    generateinkioBullet();
+                    timer = 0;
+                }
+                timer++;
+            }
+            else
+            {
+                eraseinkio();
+                enemyX = 150;
+                enemyY = 20;
+            }
+            if (redio_health != 0)
+            {
+                printredio();
+                moveredio();
+                if (timer1 == 5)
+                {
+                    generateredioBullet();
+                    timer1 = 0;
+                }
+                timer1++;
+            }
+            else
+            {
+                eraseredio();
+                enemyA = 150;
+                enemyB = 20;
+            }
+            if (twinklo_health != 0)
+            {
+                printtwinklo();
+                movetwinklo();
+                if (timer2 == 7)
+                {
+                    generatetwinkloBullet();
+                    timer2 = 0;
+                }
+                timer2++;
+            }
+            else
+            {
+                erasetwinklo();
+                enemyC = 150;
+                enemyD = 20;
+            }
+            if(twinklo_health == 0 && redio_health == 0 && inkio_health == 0)
+            {
+                system("cls");
+                cout<<"You won!"<<endl;
+                cout<<"Enter any key to continue...";
+                getch();
+                main();
+            }
+            if (player_health <= 0)
+            {
+                break;
+            }
+
             moveredioBullet();
-            timer1 = 0;
-        }
-        if (timer2 == 7)
-        {
-            movetwinklo();
+            moveinkioBullet();
             movetwinkloBullet();
-            timer2 = 0;
+            Sleep(30);
         }
-
-        moveBullet();
-        bulletCollionWithinkio();
-        bulletCollionWithredio();
-        bulletCollionWithtwinklo();
-        bulletCollionWithtTank();
-        if(inkio_health>=0)
-        {
-        printInkioHealth();
-        }
-        if(redio_health>=0)
-        printRedioHealth();
-        if(twinklo_health>=0)
-        printTwinkloHealth();
-        if(player_health>=0)
-        printTankHealth();
-
-        timer++;
-        timer1++;
-        timer2++;
-        Sleep(30);
     }
-
-    }
-    else if(choice=="2")
+    else if (choice == "2")
     {
         system("cls");
         options();
     }
-     else if(choice=="3")
+    else if (choice == "3")
     {
-        cout<<"Exit"<<endl;
+        cout << "Exit" << endl;
         Sleep(30);
         system("cls");
     }
 }
 void keys()
 {
-    cout<<"**********************KEYS***********************"<<endl;
-    cout<<"Prees up key to move up"<<endl;
-    cout<<"Press down key to move "<<endl;
-    cout<<"Press left key to move left"<<endl;
-    cout<<"Press right key to move right"<<endl;
-    cout<<"Press space key to shoot"<<endl;
+    cout << "*******KEYS********" << endl;
+    cout << "Prees up key to move up" << endl;
+    cout << "Press down key to move " << endl;
+    cout << "Press left key to move left" << endl;
+    cout << "Press right key to move right" << endl;
+    cout << "Press space key to shoot" << endl;
 }
 void instructions()
 {
-    cout<<"shoot the enemies to get extra point"<<endl;
-    cout<<"collect power pallets to get the power"<<endl;
-    cout<<"kill all the enemies to go to the next level"<<endl;
-    cout<<"save your player from the bullets of enemies"<<endl;
-    cout<<"the power of player decrease if the bullet from the enemy side hits the player"<<endl;
-    cout<<"the power of enemy decrease if the bullet from the player side hits the enemy"<<endl;
-    cout<<" the enemy is killed by the player if the five bullets from the player side will hit the enemy "<<endl;
-    cout<<"If the bullet from the player hits the enemy the score increase "<<endl;
+    cout << "shoot the enemies to get extra point" << endl;
+    cout << "collect power pallets to get the power" << endl;
+    cout << "kill all the enemies to go to the next level" << endl;
+    cout << "save your player from the bullets of enemies" << endl;
+    cout << "the power of player decrease if the bullet from the enemy side hits the player" << endl;
+    cout << "the power of enemy decrease if the bullet from the player side hits the enemy" << endl;
+    cout << " the enemy is killed by the player if the five bullets from the player side will hit the enemy " << endl;
+    cout << "If the bullet from the player hits the enemy the score increase " << endl;
 }
 
 void printTank()
@@ -473,9 +531,9 @@ void moveTankUp()
 }
 void moveTankDown()
 {
-    char next = getCharAtxy(tankX, tankY + 3);
-    char next1 = getCharAtxy(tankX + 1, tankY + 3);
-    char next2 = getCharAtxy(tankX + 2, tankY + 3);
+    char next = getCharAtxy(tankX, tankY + 4);
+    char next1 = getCharAtxy(tankX + 1, tankY + 4);
+    char next2 = getCharAtxy(tankX + 2, tankY + 4);
     if (next == ' ' && next1 == ' ' && next2 == ' ')
     {
         eraseTank();
@@ -783,7 +841,7 @@ void moveinkioBullet()
     {
         if (isinkioBulletActive[x] == true)
         {
-            char next = getCharAtxy(inkiobulletX[x], inkiobulletY[x] + 4);
+            char next = getCharAtxy(inkiobulletX[x], inkiobulletY[x] + 1);
             if (next != ' ')
             {
                 eraseinkioBullet(inkiobulletX[x], inkiobulletY[x]);
@@ -804,7 +862,7 @@ void moveredioBullet()
     {
         if (isredioBulletActive[x] == true)
         {
-            char next = getCharAtxy(rediobulletX[x], rediobulletY[x] + 4);
+            char next = getCharAtxy(rediobulletX[x], rediobulletY[x] + 1);
             if (next != ' ')
             {
                 eraseredioBullet(rediobulletX[x], rediobulletY[x]);
@@ -813,7 +871,7 @@ void moveredioBullet()
             else
             {
                 eraseredioBullet(rediobulletX[x], rediobulletY[x]);
-                rediobulletY[x] = rediobulletY[x] + 2;
+                rediobulletY[x] = rediobulletY[x] + 1;
                 printredioBullet(rediobulletX[x], rediobulletY[x]);
             }
         }
@@ -825,7 +883,7 @@ void movetwinkloBullet()
     {
         if (istwinkloBulletActive[x] == true)
         {
-            char next = getCharAtxy(twinklobulletX[x], twinklobulletY[x] + 4);
+            char next = getCharAtxy(twinklobulletX[x], twinklobulletY[x] + 1);
             if (next != ' ')
             {
                 erasetwinkloBullet(twinklobulletX[x], twinklobulletY[x]);
@@ -834,7 +892,7 @@ void movetwinkloBullet()
             else
             {
                 erasetwinkloBullet(twinklobulletX[x], twinklobulletY[x]);
-                twinklobulletY[x] = twinklobulletY[x] + 2;
+                twinklobulletY[x] = twinklobulletY[x] + 1;
                 printtwinkloBullet(twinklobulletX[x], twinklobulletY[x]);
             }
         }
@@ -933,28 +991,28 @@ void printTwinkloHealth()
 void eraseInkioHealth()
 {
     inkio_health = inkio_health - 5;
-    if(inkio_health>=0)
+    if (inkio_health >= 0)
     {
-    gotoxy(3, 30);
-    cout << inkio_health;
+        gotoxy(3, 30);
+        cout << inkio_health;
     }
 }
 void eraseRedioHealth()
 {
     redio_health = redio_health - 5;
-    if(redio_health>=0)
+    if (redio_health >= 0)
     {
-    gotoxy(3, 31);
-    cout << redio_health;
+        gotoxy(3, 31);
+        cout << redio_health;
     }
 }
 void eraseTwinkloHealth()
 {
     twinklo_health = twinklo_health - 5;
-    if(twinklo_health>=0)
+    if (twinklo_health >= 0)
     {
-    gotoxy(3, 32);
-    cout << twinklo_health;
+        gotoxy(3, 32);
+        cout << twinklo_health;
     }
 }
 void printTankHealth()
@@ -965,10 +1023,10 @@ void printTankHealth()
 void eraseTankHealth()
 {
     player_health = player_health - 3;
-    if(player_health>=0)
+    if (player_health >= 0)
     {
-    gotoxy(3, 29);
-    cout << player_health;
+        gotoxy(2, 29);
+        cout << player_health;
     }
 }
 void bulletCollionWithtTank()
@@ -997,7 +1055,7 @@ void bulletCollionWithtTank()
             {
                 eraseTankHealth();
             }
-            if (rediobulletX[x] == tankX +13 && rediobulletY[x] == tankY + 1)
+            if (rediobulletX[x] == tankX + 13 && rediobulletY[x] == tankY + 1)
             {
                 eraseTankHealth();
             }
@@ -1018,4 +1076,195 @@ void bulletCollionWithtTank()
             }
         }
     }
+}
+void playerCollisioWwithInkio()
+{
+    //////////////////////////////When Tank is Down/////////////////////////////////////////////////
+    if (enemyX + 3 == tankX && (enemyY == tankY || enemyY == tankY + 1 || enemyY == tankY - 1 || enemyY == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+    //////////////////////////////When Tank is Right/////////////////////////////////////////////////
+    if (enemyX + 3 == tankX && (enemyY == tankY || enemyY == tankY + 1 || enemyY == tankY - 1 || enemyY == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+    //////////////////////////////When Tank is Left/////////////////////////////////////////////////
+    if (enemyX - 3 == tankX && (enemyY == tankY || enemyY == tankY - 1 || enemyY == tankY - 1 || enemyY == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+}
+void playerCollisioWwithRedio()
+{
+    //////////////////////////////When Tank is Down/////////////////////////////////////////////////
+    if (enemyA + 3 == tankX && (enemyB == tankY || enemyB == tankY + 1 || enemyB == tankY - 1 || enemyB == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+    //////////////////////////////When Tank is Right/////////////////////////////////////////////////
+    if (enemyA + 3 == tankX && (enemyB == tankY || enemyB == tankY + 1 || enemyB == tankY - 1 || enemyB == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+    //////////////////////////////When Tank is Left/////////////////////////////////////////////////
+    if (enemyA - 3 == tankX && (enemyB == tankY || enemyB == tankY - 1 || enemyB == tankY - 1 || enemyB == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+}
+void playerCollisioWwithTwinklo()
+{
+    //////////////////////////////When Tank is Down/////////////////////////////////////////////////
+    if (enemyC + 3 == tankX && (enemyD == tankY || enemyD == tankY + 1 || enemyD == tankY - 1 || enemyD == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+    //////////////////////////////When Tank is Right/////////////////////////////////////////////////
+    if (enemyC + 3 == tankX && (enemyD == tankY || enemyD == tankY + 1 || enemyD == tankY - 1 || enemyD == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+    //////////////////////////////When Tank is Left/////////////////////////////////////////////////
+    if (enemyC - 3 == tankX && (enemyD == tankY || enemyD == tankY - 1 || enemyD == tankY - 1 || enemyD == tankY - 2))
+    {
+        eraseTankHealth();
+    }
+}
+void printJake()
+{
+  for (int i = 0; i < 3; i++)
+  {
+    gotoxy(JakeX, JakeY + i);
+    for (int j = 0; j < 3; j++)
+    {
+      cout << Jake[i][j];
+    }
+    cout << endl;
+  }
+}
+void eraseJake()
+{
+  for (int i = 0; i < 3; i++)
+  {
+    gotoxy(JakeX, JakeY + i);
+    for (int j = 0; j < 3; j++)
+    {
+      cout << " ";
+    }
+    cout << endl;
+  }
+}
+void moveJake(int x, int y)
+{
+  char next;
+
+  if (x > JakeX && y > JakeY)
+  {
+    next = getCharAtxy(JakeX, JakeY + 2);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY++;
+      printJake();
+    }
+    next = getCharAtxy(JakeX + 3, JakeY);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeX++;
+      printJake();
+    }
+  }
+  else if (x == JakeX && y > JakeY)
+  {
+    next = getCharAtxy(JakeX, JakeY + 2);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY++;
+      printJake();
+    }
+  }
+  else if (x < JakeX && y > JakeY)
+  {
+    next = getCharAtxy(JakeX, JakeY + 2);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY++;
+      printJake();
+    }
+    next = getCharAtxy(JakeX - 1, JakeY);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeX--;
+      printJake();
+    }
+  }
+  else if (x > JakeX && y == JakeY)
+  {
+    next = getCharAtxy(JakeX + 3, JakeY);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY++;
+      printJake();
+    }
+  }
+  else if (x < JakeX && y == JakeY)
+  {
+    next = getCharAtxy(JakeX - 1, JakeY);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY--;
+      printJake();
+    }
+  }
+  else if (x < JakeX && y < JakeY)
+  {
+    next = getCharAtxy(JakeX, JakeY - 1);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY--;
+      printJake();
+    }
+    next = getCharAtxy(JakeX - 1, JakeY);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeX--;
+      printJake();
+    }
+  }
+  else if (x > JakeX && y < JakeY)
+  {
+    next = getCharAtxy(JakeX, JakeY - 1);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY--;
+      printJake();
+    }
+    next = getCharAtxy(JakeX + 3, JakeY);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeX++;
+      printJake();
+    }
+  }
+  else
+  {
+    next = getCharAtxy(JakeX, JakeY - 1);
+    if (next == ' ')
+    {
+      eraseJake();
+      JakeY--;
+      printJake();
+    }
+  }
 }
