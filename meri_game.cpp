@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <fstream>
 #include <conio.h>
 using namespace std;
 void printMaze();
@@ -7,9 +8,10 @@ void printTank();
 void printinkio();
 void printredio();
 void printtwinklo();
+void readMazeFromFile();
 
 void printJake();
-void moveJake(int x,int y);
+void moveJake(int x, int y);
 void eraseJake();
 
 void moveTankDown();
@@ -92,7 +94,7 @@ int twinklotimer = 0;
 int inkio_health = 50;
 int redio_health = 70;
 int twinklo_health = 80;
-int player_health = 90;
+int player_health = 50;
 
 char body = 254;
 char arm = 45;
@@ -119,37 +121,9 @@ char enemy3[3][3] = {{box, box, box},
                      {' ', ':', ' '}};
 
 char Jake[3][3] = {{' ', '|', ' '},
-                     {arm, body, arm},
-                     {' ', '|', ' '}};
-
-string maze1[26][121] = {
-    {"#########################################################################################################################"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                     #                                         #                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#                                                                                                                       #"},
-    {"#########################################################################################################################"}};
-
+                   {arm, body, arm},
+                   {' ', '|', ' '}};
+char maze1[26][121];
 // player coordinates
 int tankX = 5;
 int tankY = 20;
@@ -195,11 +169,11 @@ main()
 }
 void printMaze()
 {
-    for (int idx = 0; idx < 26; idx++)
+    for (int i = 0; i < 26; i++)
     {
         for (int j = 0; j < 121; j++)
         {
-            cout << maze1[idx][j];
+            cout << maze1[i][j];
         }
         cout << endl;
     }
@@ -296,6 +270,7 @@ void wholeGame()
         game_name();
         game_logo();
         system("cls");
+        readMazeFromFile();
         printMaze();
         printTank();
         printinkio();
@@ -304,7 +279,7 @@ void wholeGame()
         printJake();
         while (runGame)
         {
-            moveJake(tankX,tankY);
+            moveJake(tankX, tankY);
             printTankHealth();
             printRedioHealth();
             printInkioHealth();
@@ -390,11 +365,11 @@ void wholeGame()
                 enemyC = 150;
                 enemyD = 20;
             }
-            if(twinklo_health == 0 && redio_health == 0 && inkio_health == 0)
+            if (twinklo_health == 0 && redio_health == 0 && inkio_health == 0)
             {
                 system("cls");
-                cout<<"You won!"<<endl;
-                cout<<"Enter any key to continue...";
+                cout << "You won!" << endl;
+                cout << "Enter any key to continue...";
                 getch();
                 main();
             }
@@ -406,7 +381,7 @@ void wholeGame()
             moveredioBullet();
             moveinkioBullet();
             movetwinkloBullet();
-            Sleep(30);
+            Sleep(50);
         }
     }
     else if (choice == "2")
@@ -453,6 +428,24 @@ void printTank()
         }
         cout << endl;
     }
+}
+void readMazeFromFile()
+{
+    fstream file;
+    string line;
+    int j = 0;
+    file.open("maze (2).txt", ios::in);
+    while (!file.eof())
+    {
+        getline(file, line);
+        for (int i = 0; i < 121; i++)
+        {
+            maze1[j][i] = line[i];
+        }
+        j++;
+    }
+    file.close();
+    j = 0;
 }
 void printinkio()
 {
@@ -1022,12 +1015,9 @@ void printTankHealth()
 }
 void eraseTankHealth()
 {
-    player_health = player_health - 3;
-    if (player_health >= 0)
-    {
-        gotoxy(2, 29);
-        cout << player_health;
-    }
+    player_health = player_health - 1;
+    gotoxy(2, 29);
+    cout << player_health;
 }
 void bulletCollionWithtTank()
 {
@@ -1133,138 +1123,94 @@ void playerCollisioWwithTwinklo()
 }
 void printJake()
 {
-  for (int i = 0; i < 3; i++)
-  {
-    gotoxy(JakeX, JakeY + i);
-    for (int j = 0; j < 3; j++)
+    for (int i = 0; i < 3; i++)
     {
-      cout << Jake[i][j];
+        gotoxy(JakeX, JakeY + i);
+        for (int j = 0; j < 3; j++)
+        {
+            cout << Jake[i][j];
+        }
+        cout << endl;
     }
-    cout << endl;
-  }
 }
 void eraseJake()
 {
-  for (int i = 0; i < 3; i++)
-  {
-    gotoxy(JakeX, JakeY + i);
-    for (int j = 0; j < 3; j++)
+    for (int i = 0; i < 3; i++)
     {
-      cout << " ";
+        gotoxy(JakeX, JakeY + i);
+        for (int j = 0; j < 3; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
-  }
 }
 void moveJake(int x, int y)
 {
-  char next;
+    char next;
 
-  if (x > JakeX && y > JakeY)
-  {
-    next = getCharAtxy(JakeX, JakeY + 2);
-    if (next == ' ')
+    if (x > JakeX && y > JakeY)
     {
-      eraseJake();
-      JakeY++;
-      printJake();
+        next = getCharAtxy(JakeX, JakeY + 2);
+        if (next == ' ' && JakeY < 14)
+        {
+            eraseJake();
+            JakeY++;
+            printJake();
+        }
+        next = getCharAtxy(JakeX + 3, JakeY);
+        if (next == ' ')
+        {
+            eraseJake();
+            JakeX++;
+            printJake();
+        }
     }
-    next = getCharAtxy(JakeX + 3, JakeY);
-    if (next == ' ')
+    else if (x == JakeX && y > JakeY)
     {
-      eraseJake();
-      JakeX++;
-      printJake();
+        next = getCharAtxy(JakeX, JakeY + 2);
+        if (next == ' ' && JakeY < 14)
+        {
+            eraseJake();
+            JakeY++;
+            printJake();
+        }
     }
-  }
-  else if (x == JakeX && y > JakeY)
-  {
-    next = getCharAtxy(JakeX, JakeY + 2);
-    if (next == ' ')
+    else if (x < JakeX && y > JakeY)
     {
-      eraseJake();
-      JakeY++;
-      printJake();
+        next = getCharAtxy(JakeX, JakeY + 2);
+        if (next == ' ' && JakeY < 14)
+        {
+            eraseJake();
+            JakeY++;
+            printJake();
+        }
+        next = getCharAtxy(JakeX - 1, JakeY);
+        if (next == ' ')
+        {
+            eraseJake();
+            JakeX--;
+            printJake();
+        }
     }
-  }
-  else if (x < JakeX && y > JakeY)
-  {
-    next = getCharAtxy(JakeX, JakeY + 2);
-    if (next == ' ')
+    else if (x > JakeX && y < JakeY)
     {
-      eraseJake();
-      JakeY++;
-      printJake();
+        next = getCharAtxy(JakeX, JakeY-1);
+        if (next == ' ' && JakeY < 14)
+        {
+            eraseJake();
+            JakeY++;
+            printJake();
+        }
     }
-    next = getCharAtxy(JakeX - 1, JakeY);
-    if (next == ' ')
+    else
     {
-      eraseJake();
-      JakeX--;
-      printJake();
+        next = getCharAtxy(JakeX, JakeY-1);
+        if (next == ' ' && JakeY<14)
+        {
+            eraseJake();
+            JakeY--;
+            printJake();
+        }
     }
-  }
-  else if (x > JakeX && y == JakeY)
-  {
-    next = getCharAtxy(JakeX + 3, JakeY);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeY++;
-      printJake();
-    }
-  }
-  else if (x < JakeX && y == JakeY)
-  {
-    next = getCharAtxy(JakeX - 1, JakeY);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeY--;
-      printJake();
-    }
-  }
-  else if (x < JakeX && y < JakeY)
-  {
-    next = getCharAtxy(JakeX, JakeY - 1);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeY--;
-      printJake();
-    }
-    next = getCharAtxy(JakeX - 1, JakeY);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeX--;
-      printJake();
-    }
-  }
-  else if (x > JakeX && y < JakeY)
-  {
-    next = getCharAtxy(JakeX, JakeY - 1);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeY--;
-      printJake();
-    }
-    next = getCharAtxy(JakeX + 3, JakeY);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeX++;
-      printJake();
-    }
-  }
-  else
-  {
-    next = getCharAtxy(JakeX, JakeY - 1);
-    if (next == ' ')
-    {
-      eraseJake();
-      JakeY--;
-      printJake();
-    }
-  }
 }
