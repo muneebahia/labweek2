@@ -3,6 +3,7 @@
 #include <fstream>
 #include <conio.h>
 using namespace std;
+HANDLE acolor=GetStdHandle(STD_OUTPUT_HANDLE);
 void printMaze();
 void printTank();
 void printinkio();
@@ -62,7 +63,6 @@ void maketwinkloBulletInactive(int idx);
 
 void addScore();
 void printScore();
-
 void gotoxy(int x, int y);
 char getCharAtxy(short int x, short int y);
 void bulletCollionWithinkio();
@@ -165,10 +165,12 @@ int twinklobulletCount = 0;
 main()
 {
     system("cls");
+    game_name();
+     game_logo();
     wholeGame();
 }
 void printMaze()
-{
+{ SetConsoleTextAttribute(acolor,14);
     for (int i = 0; i < 26; i++)
     {
         for (int j = 0; j < 121; j++)
@@ -179,49 +181,49 @@ void printMaze()
     }
 }
 void game_logo()
-{
-    cout << "                                                                               ----.  -==" << endl;
-    cout << "                                                                            .:=*       .*" << endl;
-    cout << "                                                                       :----:  += :----. " << endl;
-    cout << "                                 ::::::::::::::::::             .:----:..:::::: .:.      " << endl;
-    cout << "                               -=                  =.      .----:  .----:                " << endl;
-    cout << "                              :=                    *:--:::..::::::.                     " << endl;
-    cout << "                              *                     .+ .----:                            " << endl;
-    cout << "                --:::::::::+  #                      #-.                                 " << endl;
-    cout << "                *          +. *                      *                                   " << endl;
-    cout << "              .:#          +-:+::::::::::::::::::::::+:::-:                              " << endl;
-    cout << "             +: *          +.                              =-                            " << endl;
-    cout << "            =   .:::::::::::                                .+.                          " << endl;
-    cout << "           *                                                  *.                         " << endl;
-    cout << "        .:==:::::::::::::::::::::::::::------::::::::::----:::-+:::                      " << endl;
-    cout << "      -=:                                                          -=                    " << endl;
-    cout << "    :=  :--=+=------+++--------=*+---------=+++---:::--=++---=.  +.                  " << endl;
-    cout << "   =:.=-.=-. .-=  -=.    .=-   ---.  .:-=.  ---.  .:-=   =-. .:-: :+  =:                 " << endl;
-    cout << "  :  =: :-     -=:=        =- *          +.+:         * +.      =  *                     " << endl;
-    cout << "      ==.+     +.::        :=.=          .-#          -::+     .=-=                      " << endl;
-    cout << "        -==---   +:      :+  +:        . :+        -+   ----+*=                        " << endl;
-    cout << "           ::-::-::++==---:    :--::::---    --::::-=:::::-::-:                          " << endl;
-    cout << "                      .:----------------------------::.                                  " << endl;
+{    SetConsoleTextAttribute(acolor,2);
+    cout<<"                                                                                         ----.  -== "<< endl;
+    cout<<"                                                                                      .:=*       .* "<< endl;
+    cout<<"                                                                                 :----:  += :----.  "<< endl;
+    cout<<"                                           ::::::::::::::::::             .:----:..:::::: .:.       "<< endl;
+    cout<<"                                         -=                  =.      .----:  .----:                 "<< endl;
+    cout<<"                                        :=                    *:--:::..::::::.                      "<< endl;
+    cout<<"                                        *                     .+ .----:                             "<< endl;
+    cout<<"                          --:::::::::+  #                      #-.                                  "<< endl;
+    cout<<"                          *          +. *                      *                                    "<< endl;
+    cout<<"                        .:#          +-:+::::::::::::::::::::::+:::-:                               "<< endl;
+    cout<<"                       +: *          +.                              =-                             "<< endl;
+    cout<<"                      =   .:::::::::::                                .+.                           "<< endl;
+    cout<<"                     *                                                  *.                          "<< endl;
+    cout<<"                  .:==:::::::::::::::::::::::::::------::::::::::----:::-+:::                       "<< endl;
+    cout<<"                -=:                                                          -=                     "<< endl;
+    cout<<"              :=  :--=+=------+++--------=*+---------=+++---:::--=++---=.  +.                       "<<endl;
+    cout<<"             =:.=-.=-. .-=  -=.    .=-   ---.  .:-=.  ---.  .:-=   =-. .:-: :+  =:                  "<< endl;
+    cout<<"            :  =: :-     -=:=        =- *          +.+:         * +.      =  *                      "<< endl;
+    cout<<"                ==.+     +.::        :=.=          .-#          -::+     .=-=                       "<< endl;
+    cout<<"                  -==---   +:      :+  +:        . :+        -+   ----+*=                           "<< endl;
+    cout<<"                     ::-::-::++==---:    :--::::---    --::::-=:::::-::-:                           "<< endl;
+    cout<<"                                .:----------------------------::.                                   "<< endl;
     cout << "Press any key to continue" << endl;
     getch();
 }
 
 void game_name()
-{
-    cout << "######     ###    ##  ##   ### ###           ######   ######    #####    ##  ##  ######    ###     ######  " << endl;
-    cout << " ######   #####   ### ###   ## ###            ######  ### ###  ### ###  ### ###   ## ###   ###      ###### " << endl;
-    cout << "  ###    ### ###  ### ###   #####              ###    ###  ##  ### ###  ### ###   ## ###   ###      ##     " << endl;
-    cout << "  ###    ### ###  #### ##  #####               ###    ### ###  ##   ##  ##  ###   #####   ###      ######  " << endl;
-    cout << "  ###    ### ###  ## ####  ####                ###    ######   ##   ##  ###  ##  ### ##   ###      #####   " << endl;
-    cout << "  ###    #######  ### ###  ######              ###    ### ###  ### ###  ### ###  ### ###  ### ###  ###     " << endl;
-    cout << "  ###    ### ###  ### ###  ### ###             ###     ### ### #######  #######  #######  #######  ####### " << endl;
-    cout << " #####    ##  ##   ##  ##  ### ###            #####    ### ###  #####    #####   ######    #####    #####  " << endl;
+{ SetConsoleTextAttribute(acolor,11);
+    cout<<"######     ###    ##  ##   ### ###           ######   ######    #####    ##  ##  ######    ###     ######  "<< endl;
+    cout<<" ######   #####   ### ###   ## ###            ######  ### ###  ### ###  ### ###   ## ###   ###      ###### "<< endl;
+    cout<<"  ###    ### ###  ### ###   #####              ###    ###  ##  ### ###  ### ###   ## ###   ###      ##     "<< endl;
+    cout<<"  ###    ### ###  #### ##  #####               ###    ### ###  ##   ##  ##  ###   #####   ###      ######  "<< endl;
+    cout<<"  ###    ### ###  ## ####  ####                ###    ######   ##   ##  ###  ##  ### ##   ###      #####   "<< endl;
+    cout<<"  ###    #######  ### ###  ######              ###    ### ###  ### ###  ### ###  ### ###  ### ###  ###     "<< endl;
+    cout<<"  ###    ### ###  ### ###  ### ###             ###     ### ### #######  #######  #######  #######  ####### "<< endl;
+    cout<<" #####    ##  ##   ##  ##  ### ###            #####    ### ###  #####    #####   ######    #####    #####  "<< endl;
 }
 void options()
 {
     string option;
     while (option != "3")
-    {
+    { SetConsoleTextAttribute(acolor,11);
         cout << "1)keys" << endl;
         cout << "2)instructions" << endl;
         cout << "3)Exit" << endl;
@@ -248,15 +250,15 @@ void options()
             system("cls");
             options();
         }
-        else if (option == "3")
-        {
-            system("cls");
-            wholeGame();
-        }
+        // else if (option == "3")
+        // {
+        //     system("cls");
+        //     wholeGame();
+        // }
     }
 }
 void wholeGame()
-{
+{ SetConsoleTextAttribute(acolor,11);
     cout << "1)Start" << endl;
     cout << "2)Options" << endl;
     cout << "3)Exit" << endl;
@@ -267,8 +269,8 @@ void wholeGame()
     {
         bool runGame = true;
         system("cls");
-        game_name();
-        game_logo();
+        // game_name();
+        // game_logo();
         system("cls");
         readMazeFromFile();
         printMaze();
@@ -397,28 +399,49 @@ void wholeGame()
     }
 }
 void keys()
-{
-    cout << "*******KEYS********" << endl;
-    cout << "Prees up key to move up" << endl;
+{ SetConsoleTextAttribute(acolor,14);
+    cout<<" ##    ## ######## ##    ##  ###### "<<endl; 
+    cout<<" ##   ##  ##        ##  ##  ##    ##"<<endl; 
+    cout<<" ##  ##   ##         ####   ##      "<<endl; 
+    cout<<" #####    ######      ##     ###### "<<endl; 
+    cout<<" ##  ##   ##          ##          ##"<<endl; 
+    cout<<" ##   ##  ##          ##    ##    ##"<<endl; 
+    cout<<" ##    ## ########    ##     ###### "<<endl; 
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+     SetConsoleTextAttribute(acolor,14);
+    cout << "Press up key to move up" << endl;
     cout << "Press down key to move " << endl;
     cout << "Press left key to move left" << endl;
     cout << "Press right key to move right" << endl;
     cout << "Press space key to shoot" << endl;
 }
 void instructions()
-{
-    cout << "shoot the enemies to get extra point" << endl;
-    cout << "collect power pallets to get the power" << endl;
-    cout << "kill all the enemies to go to the next level" << endl;
-    cout << "save your player from the bullets of enemies" << endl;
-    cout << "the power of player decrease if the bullet from the enemy side hits the player" << endl;
-    cout << "the power of enemy decrease if the bullet from the player side hits the enemy" << endl;
-    cout << " the enemy is killed by the player if the five bullets from the player side will hit the enemy " << endl;
-    cout << "If the bullet from the player hits the enemy the score increase " << endl;
+{ SetConsoleTextAttribute(acolor,14);
+  cout<<"####   ###  ##   ## ##   #### ##  ### ##   ##  ###   ## ##   #### ##    ####    ## ##   ###  ##   ## ## "<<endl;  
+  cout<<" ##      ## ##  ##   ##  # ## ##   ##  ##  ##   ##  ##   ##  # ## ##     ##    ##   ##    ## ##  ##   ##"<<endl;  
+  cout<<" ##     # ## #  ####       ##      ##  ##  ##   ##  ##         ##        ##    ##   ##   # ## #  ####   "<<endl;  
+  cout<<" ##     ## ##    #####     ##      ## ##   ##   ##  ##         ##        ##    ##   ##   ## ##    ##### "<<endl;  
+  cout<<" ##     ##  ##      ###    ##      ## ##   ##   ##  ##         ##        ##    ##   ##   ##  ##      ###"<<endl;  
+  cout<<" ##     ##  ##  ##   ##    ##      ##  ##  ##   ##  ##   ##    ##        ##    ##   ##   ##  ##  ##   ##"<<endl;  
+  cout<<"####   ###  ##   ## ##    ####    #### ##   ## ##    ## ##    ####      ####    ## ##   ###  ##   ## ## "<<endl;  
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+ SetConsoleTextAttribute(acolor,14);
+    cout << "1.shoot the enemies to get extra point" << endl;
+    cout << "2.Hit the enemies to get the power" << endl;
+    cout << "3.kill all the enemies to win the game" << endl;
+    cout << "4.save your player from the bullets of enemies" << endl;
+    cout << "5.the power of player decrease if the bullet from the enemy side hits the player" << endl;
+    cout << "6.the power of enemy decrease if the bullet from the player side hits the enemy" << endl;
+    cout << "7.the enemy is killed by the player if the power of enemies reduces to zero " << endl;
+    cout << "8.If the bullet from the player hits the enemy the score and power increase " << endl;
 }
 
 void printTank()
-{
+{ SetConsoleTextAttribute(acolor,2);
     for (int idx = 0; idx < 3; idx++)
     {
         gotoxy(tankX, tankY + idx);
@@ -448,7 +471,7 @@ void readMazeFromFile()
     j = 0;
 }
 void printinkio()
-{
+{ SetConsoleTextAttribute(acolor,3);
     for (int i = 0; i < 3; i++)
     {
         gotoxy(enemyX, enemyY + i);
@@ -460,7 +483,7 @@ void printinkio()
     }
 }
 void printredio()
-{
+{ SetConsoleTextAttribute(acolor,4);
     for (int i = 0; i < 3; i++)
     {
         gotoxy(enemyA, enemyB + i);
@@ -472,7 +495,7 @@ void printredio()
     }
 }
 void printtwinklo()
-{
+{ SetConsoleTextAttribute(acolor,6);
     for (int i = 0; i < 3; i++)
     {
         gotoxy(enemyC, enemyD + i);
@@ -724,7 +747,7 @@ void moveBullet()
 }
 // supporting functions
 void printBullet(int x, int y)
-{
+{ SetConsoleTextAttribute(acolor,2);
     gotoxy(x, y);
     cout << ".";
 }
@@ -893,17 +916,17 @@ void movetwinkloBullet()
 }
 
 void printinkioBullet(int x, int y)
-{
+{ SetConsoleTextAttribute(acolor,1);
     gotoxy(x, y);
     cout << "-";
 }
 void printredioBullet(int x, int y)
-{
+{ SetConsoleTextAttribute(acolor,4);
     gotoxy(x, y);
     cout << "-";
 }
 void printtwinkloBullet(int x, int y)
-{
+{ SetConsoleTextAttribute(acolor,6);
     gotoxy(x, y);
     cout << "-";
 }
@@ -967,17 +990,17 @@ void gotoxy(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
 }
 void printInkioHealth()
-{
+{ SetConsoleTextAttribute(acolor,1);
     gotoxy(2, 30);
     cout << "Inkio Health:" << inkio_health;
 }
 void printRedioHealth()
-{
+{ SetConsoleTextAttribute(acolor,4);
     gotoxy(2, 31);
     cout << "Redio Health:" << redio_health;
 }
 void printTwinkloHealth()
-{
+{ SetConsoleTextAttribute(acolor,6);
     gotoxy(2, 32);
     cout << "Twinklo Health:" << twinklo_health;
 }
@@ -1009,7 +1032,7 @@ void eraseTwinkloHealth()
     }
 }
 void printTankHealth()
-{
+{ SetConsoleTextAttribute(acolor,2);
     gotoxy(2, 29);
     cout << "Player Health:" << player_health;
 }
@@ -1122,7 +1145,7 @@ void playerCollisioWwithTwinklo()
     }
 }
 void printJake()
-{
+{   SetConsoleTextAttribute(acolor,11);
     for (int i = 0; i < 3; i++)
     {
         gotoxy(JakeX, JakeY + i);
