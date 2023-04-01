@@ -111,7 +111,6 @@ char tank[3][3] = {{'.', ':', '.'},
 char enemy1[3][3] = {{box, box, box},
                      {' ', ':', ' '},
                      {' ', ':', ' '}};
-// enemy character
 char enemy2[3][3] = {{box, box, box},
                      {' ', ':', ' '},
                      {' ', ':', ' '}};
@@ -471,7 +470,7 @@ void readMazeFromFile()
     j = 0;
 }
 void printinkio()
-{ SetConsoleTextAttribute(acolor,3);
+{ SetConsoleTextAttribute(acolor,5);
     for (int i = 0; i < 3; i++)
     {
         gotoxy(enemyX, enemyY + i);
@@ -916,7 +915,7 @@ void movetwinkloBullet()
 }
 
 void printinkioBullet(int x, int y)
-{ SetConsoleTextAttribute(acolor,1);
+{ SetConsoleTextAttribute(acolor,5);
     gotoxy(x, y);
     cout << "-";
 }
