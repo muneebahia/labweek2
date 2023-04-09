@@ -1,0 +1,14 @@
+D:\week-04\csharpproject\csharpproject\obj\Debug\csharpproject.csproj.AssemblyReference.cache
+D:\week-04\csharpproject\csharpproject\obj\Debug\csharpproject.csproj.CoreCompileInputs.cache
+D:\week-04\csharpproject\csharpproject\bin\Debug\csharpproject.exe.config
+D:\week-04\csharpproject\csharpproject\bin\Debug\csharpproject.exe
+D:\week-04\csharpproject\csharpproject\bin\Debug\csharpproject.pdb
+D:\week-04\csharpproject\csharpproject\obj\Debug\csharpproject.exe
+D:\week-04\csharpproject\csharpproject\obj\Debug\csharpproject.pdb
+D:\bootingCsharp\csharpproject\csharpproject\bin\Debug\csharpproject.exe.config
+D:\bootingCsharp\csharpproject\csharpproject\bin\Debug\csharpproject.exe
+D:\bootingCsharp\csharpproject\csharpproject\bin\Debug\csharpproject.pdb
+D:\bootingCsharp\csharpproject\csharpproject\obj\Debug\csharpproject.csproj.AssemblyReference.cache
+D:\bootingCsharp\csharpproject\csharpproject\obj\Debug\csharpproject.csproj.CoreCompileInputs.cache
+D:\bootingCsharp\csharpproject\csharpproject\obj\Debug\csharpproject.exe
+D:\bootingCsharp\csharpproject\csharpproject\obj\Debug\csharpproject.pdb
