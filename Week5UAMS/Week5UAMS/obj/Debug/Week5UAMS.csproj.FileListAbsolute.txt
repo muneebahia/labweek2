@@ -1,0 +1,2 @@
+D:\Github\labweek2\Week5UAMS\Week5UAMS\obj\Debug\Week5UAMS.csproj.AssemblyReference.cache
+D:\Github\labweek2\Week5UAMS\Week5UAMS\obj\Debug\Week5UAMS.csproj.CoreCompileInputs.cache

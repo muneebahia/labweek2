@@ -1,0 +1,7 @@
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\bin\Debug\Week5ShipTask.exe.config
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\bin\Debug\Week5ShipTask.exe
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\bin\Debug\Week5ShipTask.pdb
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\obj\Debug\Week5ShipTask.csproj.AssemblyReference.cache
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\obj\Debug\Week5ShipTask.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\obj\Debug\Week5ShipTask.exe
+D:\Github\labweek2\Week5ShipTask\Week5ShipTask\obj\Debug\Week5ShipTask.pdb

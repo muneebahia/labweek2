@@ -1,0 +1,7 @@
+D:\Github\labweek2\week5task3product\week5task3product\bin\Debug\week5task3product.exe.config
+D:\Github\labweek2\week5task3product\week5task3product\bin\Debug\week5task3product.exe
+D:\Github\labweek2\week5task3product\week5task3product\bin\Debug\week5task3product.pdb
+D:\Github\labweek2\week5task3product\week5task3product\obj\Debug\week5task3product.csproj.AssemblyReference.cache
+D:\Github\labweek2\week5task3product\week5task3product\obj\Debug\week5task3product.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\week5task3product\week5task3product\obj\Debug\week5task3product.exe
+D:\Github\labweek2\week5task3product\week5task3product\obj\Debug\week5task3product.pdb

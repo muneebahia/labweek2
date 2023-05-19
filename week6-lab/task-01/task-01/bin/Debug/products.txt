@@ -1,0 +1,2 @@
+water,Drink,100
+burger,Food,200

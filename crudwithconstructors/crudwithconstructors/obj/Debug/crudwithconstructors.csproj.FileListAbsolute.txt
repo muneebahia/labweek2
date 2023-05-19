@@ -1,0 +1,7 @@
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\bin\Debug\crudwithconstructors.exe.config
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\bin\Debug\crudwithconstructors.exe
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\bin\Debug\crudwithconstructors.pdb
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\obj\Debug\crudwithconstructors.csproj.AssemblyReference.cache
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\obj\Debug\crudwithconstructors.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\obj\Debug\crudwithconstructors.exe
+D:\Github\labweek2\crudwithconstructors\crudwithconstructors\obj\Debug\crudwithconstructors.pdb

@@ -1,0 +1,7 @@
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\bin\Debug\week06-taskno1.exe.config
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\bin\Debug\week06-taskno1.exe
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\bin\Debug\week06-taskno1.pdb
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\obj\Debug\week06-taskno1.csproj.AssemblyReference.cache
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\obj\Debug\week06-taskno1.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\obj\Debug\week06-taskno1.exe
+D:\Github\labweek2\WEEK-06OOP(LAYERS)\week06-taskno1\week06-taskno1\obj\Debug\week06-taskno1.pdb

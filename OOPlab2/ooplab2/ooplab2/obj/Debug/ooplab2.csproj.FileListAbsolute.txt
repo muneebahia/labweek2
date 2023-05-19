@@ -1,0 +1,7 @@
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\bin\Debug\ooplab2.exe.config
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\bin\Debug\ooplab2.exe
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\bin\Debug\ooplab2.pdb
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\obj\Debug\ooplab2.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\obj\Debug\ooplab2.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\obj\Debug\ooplab2.exe
+D:\Github\labweek2\OOPlab2\ooplab2\ooplab2\obj\Debug\ooplab2.pdb

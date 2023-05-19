@@ -1,0 +1,10 @@
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\bin\Debug\oopGame.exe.config
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\bin\Debug\oopGame.exe
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\bin\Debug\oopGame.pdb
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\obj\Debug\oopGame.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\obj\Debug\oopGame.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\obj\Debug\oopGame.exe
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\obj\Debug\oopGame.pdb
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\bin\Debug\EZInput.dll
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\bin\Debug\EZInput.xml
+D:\Github\labweek2\OOPlab2\oopGame\oopGame\obj\Debug\oopGame.csproj.CopyComplete

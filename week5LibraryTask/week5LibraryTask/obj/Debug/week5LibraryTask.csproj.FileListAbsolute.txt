@@ -1,0 +1,7 @@
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\bin\Debug\week5LibraryTask.exe.config
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\bin\Debug\week5LibraryTask.exe
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\bin\Debug\week5LibraryTask.pdb
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\obj\Debug\week5LibraryTask.csproj.AssemblyReference.cache
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\obj\Debug\week5LibraryTask.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\obj\Debug\week5LibraryTask.exe
+D:\Github\labweek2\week5LibraryTask\week5LibraryTask\obj\Debug\week5LibraryTask.pdb

@@ -1,0 +1,7 @@
+D:\Github\labweek2\oopweek5lab\oopweek5lab\obj\Debug\oopweek5lab.csproj.AssemblyReference.cache
+D:\Github\labweek2\oopweek5lab\oopweek5lab\obj\Debug\oopweek5lab.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\oopweek5lab\oopweek5lab\bin\Debug\oopweek5lab.exe.config
+D:\Github\labweek2\oopweek5lab\oopweek5lab\bin\Debug\oopweek5lab.exe
+D:\Github\labweek2\oopweek5lab\oopweek5lab\bin\Debug\oopweek5lab.pdb
+D:\Github\labweek2\oopweek5lab\oopweek5lab\obj\Debug\oopweek5lab.exe
+D:\Github\labweek2\oopweek5lab\oopweek5lab\obj\Debug\oopweek5lab.pdb
