@@ -1,0 +1,7 @@
+D:\Github\labweek2\oopWeek-08\task2\task2\bin\Debug\task2.exe.config
+D:\Github\labweek2\oopWeek-08\task2\task2\bin\Debug\task2.exe
+D:\Github\labweek2\oopWeek-08\task2\task2\bin\Debug\task2.pdb
+D:\Github\labweek2\oopWeek-08\task2\task2\obj\Debug\task2.csproj.AssemblyReference.cache
+D:\Github\labweek2\oopWeek-08\task2\task2\obj\Debug\task2.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\oopWeek-08\task2\task2\obj\Debug\task2.exe
+D:\Github\labweek2\oopWeek-08\task2\task2\obj\Debug\task2.pdb

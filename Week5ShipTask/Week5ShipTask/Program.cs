@@ -46,7 +46,7 @@ namespace Week5ShipTask
         static int Menu()
         {
             Console.WriteLine("*********************************************");
-            Console.WriteLine("                    UAMS                     ");
+            Console.WriteLine("        Ocean Nevigation System              ");
             Console.WriteLine("*********************************************");
             Console.WriteLine("1. Add ship");
             Console.WriteLine("2. View ship position");
@@ -68,7 +68,7 @@ namespace Week5ShipTask
             int lDegree = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter  Longitude Min:");
             float lMin = float.Parse(Console.ReadLine());
-            Console.WriteLine("Enter  Longitude Degree:");
+            Console.WriteLine("Enter  Longitude Direction:");
             char lDirection = char.Parse(Console.ReadLine());
             angle longitude = new angle(lDegree, lMin, lDirection);
 
@@ -81,8 +81,8 @@ namespace Week5ShipTask
             char Direction = char.Parse(Console.ReadLine());
             angle latitude = new angle(Degree, Min, Direction);
 
-            ship Addship = new ship(ShipNo, latitude, longitude);
-            return Addship;
+            ship ship = new ship(ShipNo, latitude, longitude);
+            return ship;
         }
         static void addShipInList(ship obj,List<ship> ships)
         {
@@ -151,8 +151,8 @@ namespace Week5ShipTask
             Console.WriteLine("Enter  Longitude Degree:");
             char lDirection = char.Parse(Console.ReadLine());
             angle longitude = new angle(lDegree, lMin, lDirection);
-            ship Addship = new ship(ShipNo, latitude, longitude);
-            return Addship;
+            ship newshipObj = new ship(ShipNo, latitude, longitude);
+            return newshipObj;
 
 
         }

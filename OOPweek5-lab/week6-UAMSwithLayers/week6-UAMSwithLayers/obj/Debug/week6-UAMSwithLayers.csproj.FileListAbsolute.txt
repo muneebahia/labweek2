@@ -1,0 +1,7 @@
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\bin\Debug\week6-UAMSwithLayers.exe.config
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\bin\Debug\week6-UAMSwithLayers.exe
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\bin\Debug\week6-UAMSwithLayers.pdb
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\obj\Debug\week6-UAMSwithLayers.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\obj\Debug\week6-UAMSwithLayers.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\obj\Debug\week6-UAMSwithLayers.exe
+D:\Github\labweek2\OOPweek5-lab\week6-UAMSwithLayers\week6-UAMSwithLayers\obj\Debug\week6-UAMSwithLayers.pdb

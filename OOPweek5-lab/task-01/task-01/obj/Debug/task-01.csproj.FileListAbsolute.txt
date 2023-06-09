@@ -1,0 +1,14 @@
+D:\Github\labweek2\week6-lab\task-01\task-01\bin\Debug\task-01.exe.config
+D:\Github\labweek2\week6-lab\task-01\task-01\bin\Debug\task-01.exe
+D:\Github\labweek2\week6-lab\task-01\task-01\bin\Debug\task-01.pdb
+D:\Github\labweek2\week6-lab\task-01\task-01\obj\Debug\task-01.csproj.AssemblyReference.cache
+D:\Github\labweek2\week6-lab\task-01\task-01\obj\Debug\task-01.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\week6-lab\task-01\task-01\obj\Debug\task-01.exe
+D:\Github\labweek2\week6-lab\task-01\task-01\obj\Debug\task-01.pdb
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\bin\Debug\task-01.exe.config
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\bin\Debug\task-01.exe
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\bin\Debug\task-01.pdb
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\obj\Debug\task-01.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\obj\Debug\task-01.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\obj\Debug\task-01.exe
+D:\Github\labweek2\OOPweek6-lab\task-01\task-01\obj\Debug\task-01.pdb
