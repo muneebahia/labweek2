@@ -45,10 +45,22 @@
   <ItemGroup>
     <Compile Include="BL\admin.cs" />
     <Compile Include="BL\customer.cs" />
+    <Compile Include="BL\discount.cs" />
+    <Compile Include="BL\product.cs" />
     <Compile Include="BL\User.cs" />
+    <Compile Include="BL\validations.cs" />
+    <Compile Include="DL\adminDL.cs" />
+    <Compile Include="DL\customerDL.cs" />
+    <Compile Include="DL\discountDL.cs" />
+    <Compile Include="DL\productDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\adminUI.cs" />
+    <Compile Include="UI\customerUI.cs" />
+    <Compile Include="UI\discountUI.cs" />
+    <Compile Include="UI\headersUI.cs" />
+    <Compile Include="UI\productUI.cs" />
     <Compile Include="UI\UserUI.cs" />
   </ItemGroup>
   <ItemGroup>

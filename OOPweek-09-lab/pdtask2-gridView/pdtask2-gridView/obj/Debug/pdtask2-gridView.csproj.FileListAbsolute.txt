@@ -1,0 +1,10 @@
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\bin\Debug\pdtask2-gridView.exe.config
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\bin\Debug\pdtask2-gridView.exe
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\bin\Debug\pdtask2-gridView.pdb
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2-gridView.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2_gridView.Form1.resources
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2_gridView.Properties.Resources.resources
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2-gridView.csproj.GenerateResource.cache
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2-gridView.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2-gridView.exe
+D:\Github\labweek2\OOPweek-09-lab\pdtask2-gridView\pdtask2-gridView\obj\Debug\pdtask2-gridView.pdb

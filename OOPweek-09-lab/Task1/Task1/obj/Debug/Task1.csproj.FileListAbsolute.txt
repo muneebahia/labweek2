@@ -1,0 +1,10 @@
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\bin\Debug\Task1.exe.config
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\bin\Debug\Task1.exe
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\bin\Debug\Task1.pdb
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.Form1.resources
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.Properties.Resources.resources
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.csproj.GenerateResource.cache
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.exe
+D:\Github\labweek2\OOPweek-09-lab\Task1\Task1\obj\Debug\Task1.pdb

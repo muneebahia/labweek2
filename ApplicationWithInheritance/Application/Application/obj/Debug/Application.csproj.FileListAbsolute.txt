@@ -1,0 +1,7 @@
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\bin\Debug\Application.exe.config
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\bin\Debug\Application.exe
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\bin\Debug\Application.pdb
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\obj\Debug\Application.csproj.AssemblyReference.cache
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\obj\Debug\Application.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\obj\Debug\Application.exe
+D:\Github\labweek2\ApplicationWithInheritance\Application\Application\obj\Debug\Application.pdb

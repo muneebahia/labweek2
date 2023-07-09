@@ -1,0 +1,13 @@
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\bin\Debug\week1onGUIspaceshootergame.exe.config
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\bin\Debug\week1onGUIspaceshootergame.exe
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\bin\Debug\week1onGUIspaceshootergame.pdb
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\bin\Debug\EZInput.dll
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\bin\Debug\EZInput.xml
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.csproj.AssemblyReference.cache
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.Form1.resources
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.Properties.Resources.resources
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.csproj.GenerateResource.cache
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.csproj.CopyComplete
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.exe
+D:\Github\labweek2\GUIgameweek1\week1onGUIspaceshootergame\week1onGUIspaceshootergame\obj\Debug\week1onGUIspaceshootergame.pdb

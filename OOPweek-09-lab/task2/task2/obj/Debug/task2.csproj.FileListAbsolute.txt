@@ -1,0 +1,12 @@
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\bin\Debug\task2.exe.config
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\bin\Debug\task2.exe
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\bin\Debug\task2.pdb
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.Form1.resources
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.Properties.Resources.resources
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.SignIn.resources
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.SignUp.resources
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.csproj.GenerateResource.cache
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.csproj.CoreCompileInputs.cache
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.exe
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.pdb

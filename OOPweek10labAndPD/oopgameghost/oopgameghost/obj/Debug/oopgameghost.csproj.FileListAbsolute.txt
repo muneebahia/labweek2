@@ -1,0 +1,2 @@
+D:\Github\labweek2\OOPweek10labAndPD\oopgameghost\oopgameghost\obj\Debug\oopgameghost.csproj.AssemblyReference.cache
+D:\Github\labweek2\OOPweek10labAndPD\oopgameghost\oopgameghost\obj\Debug\oopgameghost.csproj.CoreCompileInputs.cache

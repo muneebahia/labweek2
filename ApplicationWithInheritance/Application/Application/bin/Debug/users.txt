@@ -1,0 +1,5 @@
+muneeba,muneeba@123,Admin
+zainab,12345@123,Customer
+haider,09876@09876,Customer
+uuu,12345@12345,Admin
+muneeba,muneeba@123,Admin
