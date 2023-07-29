@@ -24,13 +24,13 @@ namespace task2
 
         private void btnCheckNext_Click(object sender, EventArgs e)
         {
-            if(chekSignIn.Checked)
+            if(radsignin.Checked)
             {
                 this.Hide();
                 SignIn form = new SignIn();
                 form.Show();
             }
-            if (checkBox2.Checked)
+            if (radsignup.Checked)
             {
                 this.Hide();
                 SignUp form = new SignUp();
@@ -39,6 +39,16 @@ namespace task2
         }
 
         private void chekSignIn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

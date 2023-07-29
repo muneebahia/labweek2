@@ -1,0 +1,3 @@
+hydraline,200,0
+cough,100,0
+medicine,80,2000

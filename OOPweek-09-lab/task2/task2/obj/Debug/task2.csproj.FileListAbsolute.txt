@@ -10,3 +10,4 @@ D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.csproj.GenerateRes
 D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.csproj.CoreCompileInputs.cache
 D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.exe
 D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.pdb
+D:\Github\labweek2\OOPweek-09-lab\task2\task2\obj\Debug\task2.AdminOptionsForm.resources

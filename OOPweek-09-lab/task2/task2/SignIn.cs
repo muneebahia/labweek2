@@ -31,15 +31,13 @@ namespace task2
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            string userName = lblname.Text;
-            string Password = lblpassword.Text;
-            User user = new User(userName, Password);
+            User user = new User(txtsigninName.Text, txtsigninPassword.Text);
             User Valid = UserDL.signin(user);
             if(Valid!=null)
             {
                 MessageBox.Show("User is Valid");
             }
-            else
+            else if(Valid==null)
             {
                 MessageBox.Show("InvalidUser");
             }

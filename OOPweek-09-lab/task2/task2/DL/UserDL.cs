@@ -61,7 +61,7 @@ namespace task2.DL
         {
             users.Add(user);
         }
-        public static bool readdatafromfile(string path, List<User> users)
+        public static bool readdatafromfile()
         {
 
             if (File.Exists(path))
@@ -87,10 +87,8 @@ namespace task2.DL
         {
             foreach (User storedData in users)
             {
-
                 if (user.Name == storedData.Name && user.Password == storedData.Password)
                 {
-
                     return storedData;
                 }
             }

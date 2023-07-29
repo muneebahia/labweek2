@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AddAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdminControlRead.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="adminGiveDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdminMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdminShowUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AdminFeedbackPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="BillWithDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="changePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CostlymediicinePannal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustControlCrud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustControlPannal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CustDiscountPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustfeedbackPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustMedicineListPannal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="sortedlistpannal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

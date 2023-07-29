@@ -28,23 +28,22 @@ namespace task2
         private void btnNext_Click(object sender, EventArgs e)
         {  
             bool validname = false;
-            string userName = lblname.Text;
-            string Password = lblpassword.Text;
-            string Role=lblRole.Text;
+            string userName = txtName.Text;
+            string Password = txtPassword.Text;
+            string Role=txtRole.Text;
             string path = "user.txt";
             validname = lblname.Text.Any(char.IsDigit);
             
-            if(!validations.validName(userName))
+            if(validations.validName(userName)==true)
             {
 
-
-                    if (validations.validlengthPassword(Password))
+                    if (validations.validlengthPassword(Password)==true)
                     {
-                        if (validations.validspecialPassword(Password))
+                        if (validations.validspecialPassword(Password)==true)
                         {
-                            if (validations.validletterPassword(Password))
+                            if (validations.validletterPassword(Password)==true)
                             {
-                                if (lblRole.Text == "Admin" || lblRole.Text == "Customer")
+                                if (txtRole.Text == "Admin" || txtRole.Text == "Customer")
                                 {
                                     User user = new User(userName, Password, Role);
                                     UserDL.storeDatainlist(user);

@@ -12,7 +12,7 @@ namespace task2.BL
     {
         public static void isLoadData()
         {
-            bool check = UserDL.readdatafromfile(UserDL.path, UserDL.users);
+            bool check = UserDL.readdatafromfile();
             if (check)
             {
               //  headersUI.showMsg("Data lodedd successfully");

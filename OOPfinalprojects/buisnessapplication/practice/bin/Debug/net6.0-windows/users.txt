@@ -1,0 +1,15 @@
+muneeba,haya@123,Admin
+zainab,zain@123,Customer
+muneeba,muneeba@123,Customer
+gohar,gohar@123,Customer
+123,fddssffffff,Admin
+dsffff,sffffffffffff,Admin
+gfjh,gjhj@134444,Admin
+minal,gohar@123,Customer
+tayyaba,ttt@1234,Admin
+sheri,sheri@321,Customer
+muneeba,haya@123,Customer
+muneebahia,muneeb@123,Customer
+mun1,haya@123,Customer
+muneeba,muneeba@123,Customer
+haya,haya@123,Admin
