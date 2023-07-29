@@ -28,6 +28,8 @@ namespace practice
         {
             txtAdminName.Text = "";
             txtAdminPassword.Text = "";
+
+
         }
         private void btnAddAdmin_Click(object sender, EventArgs e)
         {
