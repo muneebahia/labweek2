@@ -4,3 +4,6 @@ haider,09876@09876,Customer
 uuu,12345@12345,Admin
 muneeba,muneeba@123,Admin
 muneeba,muneeba@1234,Admin
+muneeba,muneba@123,Admin
+haya,haya@123,Admin
+minal,minal@123,Customer

@@ -1,5 +1,4 @@
-panadol,250,2000
-flagyl,50,1000
+panadol,34,54
+flagyl,50,1434
 calamox,200,1000
-calpol,400,998
 cough,300,987
